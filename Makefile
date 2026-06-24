@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-Wall -Wextra -Werror -Wpedantic -std=c18
 
 all: alloc test
-	$(CC) $(CFLAGS) test.o l_mem_alloc.o -o runable
+	$(CC) $(CFLAGS) test.o l_mem_alloc.o -o runable.o
 
 
 alloc: l_mem_alloc.c
@@ -12,4 +12,4 @@ test: test.c
 	$(CC) $(CFLAGS) -c test.c -o test.o
 
 clean:
-	rm -f *.o runable
+	rm -f *.o runable.o
