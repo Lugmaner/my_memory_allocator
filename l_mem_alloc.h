@@ -14,13 +14,12 @@
 
 typedef struct{
     size_t capacity;
-    size_t size_of_type;
-    size_t num_of_elements;
+    size_t expected_size;
     bool is_free;
 } alloc_data_t;
 
 
-void *l_malloc(size_t n, size_t size);
+void *l_malloc(size_t size);
 void *l_calloc(size_t n, size_t size);
 void l_free(void *to_free);
 void *l_realloc(void *p, size_t n, size_t size);
