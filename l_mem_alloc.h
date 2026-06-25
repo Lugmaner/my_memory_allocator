@@ -10,10 +10,13 @@
 #include <string.h>
 #include <stdalign.h>
 #include <stddef.h>
+#include <stdbool.h>
 
 typedef struct{
+    size_t capacity;
     size_t size_of_type;
     size_t num_of_elements;
+    bool is_free;
 } alloc_data_t;
 
 
